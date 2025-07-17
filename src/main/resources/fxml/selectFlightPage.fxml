@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.alabtaal.airline.PassengerFlightController.SelectFlightController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="550.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/selectFlightPage.png" />
+         </image>
+      </ImageView>
+
+      <Label layoutX="23.0" layoutY="75.0" text="From:">
+         <font><Font name="System Bold" size="12.0" /></font>
+      </Label>
+      <Label layoutX="21.0" layoutY="113.0" text="To:">
+         <font><Font name="System Bold" size="12.0" /></font>
+      </Label>
+
+      <TextField fx:id="FromTextField" layoutX="92.0" layoutY="71.0" opacity="0.73" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #ffffff;" />
+      <TextField fx:id="ToTextField" layoutX="92.0" layoutY="109.0" opacity="0.72" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #ffffff;" />
+
+      <Label layoutX="17.0" layoutY="157.0" text="Select Class">
+         <font><Font name="System Bold" size="12.0" /></font>
+      </Label>
+      <ChoiceBox fx:id="SelectClass" layoutX="92.0" layoutY="153.0" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #ffece6;" />
+
+      <TableView fx:id="flightTableView" layoutX="220.0" layoutY="78.0" opacity="0.63" prefHeight="200.0" prefWidth="330.0" style="-fx-background-color: #fff997;">
+         <columns>
+            <TableColumn fx:id="FromScheduleField" prefWidth="72.66664123535156" text="From" />
+            <TableColumn fx:id="ToScheduleField" prefWidth="78.00006103515625" text="To" />
+            <TableColumn fx:id="DepartureDateSchedule" prefWidth="100.0" text="Departure Date" />
+            <TableColumn fx:id="DepartureTimeSchedule" prefWidth="100.0" text="Departure Time" />
+         </columns>
+      </TableView>
+
+      <Label layoutX="317.0" layoutY="51.0" text="Flight Schedule" textFill="#b36363">
+         <font><Font name="System Bold" size="14.0" /></font>
+      </Label>
+
+      <Label layoutX="17.0" layoutY="192.0" text="Duration">
+         <font><Font name="System Bold" size="12.0" /></font>
+      </Label>
+      <TextField fx:id="departureTimeTextField" layoutX="89.0" layoutY="188.0" opacity="0.68" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #ff0089;" />
+
+      <Button fx:id="nextButton" layoutX="145.0" layoutY="262.0" onAction="#nextButton" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: #ffffff;" text="Next">
+         <font><Font name="System Bold Italic" size="12.0" /></font>
+      </Button>
+
+      <Button fx:id="backButton" layoutX="30.0" layoutY="262.0" onAction="#backButton" style="-fx-background-color: #ffffff;" text="Back">
+         <font><Font name="System Bold Italic" size="12.0" /></font>
+      </Button>
+   </children>
+</AnchorPane>

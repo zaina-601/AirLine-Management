@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="600.0" prefWidth="900.0"
+            style="-fx-background-color: #f5f5f5;"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.alabtaal.airline.AdminModuleController.ViewPassengerController">
+
+    <!-- Header Section -->
+    <VBox layoutX="0.0" layoutY="0.0" prefHeight="80.0" prefWidth="900.0"
+          style="-fx-background-color: #2c3e50; -fx-alignment: center;">
+        <Label text="Flight Information" style="-fx-text-fill: white; -fx-font-weight: bold;">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+    </VBox>
+
+    <!-- Main Content -->
+    <VBox layoutX="50.0" layoutY="100.0" prefWidth="800.0">
+
+        <!-- Flight Table -->
+        <TableView fx:id="flightTableView" prefHeight="400.0" prefWidth="800.0"
+                   style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <columns>
+                <TableColumn fx:id="flightNumberCol" prefWidth="110.0" text="Flight Number"
+                             style="-fx-alignment: CENTER; -fx-font-weight: bold;"/>
+                <TableColumn fx:id="fromCol" prefWidth="90.0" text="From"
+                             style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="toCol" prefWidth="90.0" text="To"
+                             style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="departureDateCol" prefWidth="110.0" text="Departure Date"
+                             style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="departureTimeCol" prefWidth="110.0" text="Departure Time"
+                             style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="arrivalDateCol" prefWidth="110.0" text="Arrival Date"
+                             style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="arrivalTimeCol" prefWidth="110.0" text="Arrival Time"
+                             style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="durationCol" prefWidth="90.0" text="Duration"
+                             style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="economyPriceCol" prefWidth="110.0" text="Economy Price"
+                             style="-fx-alignment: CENTER-RIGHT;"/>
+                <TableColumn fx:id="businessPriceCol" prefWidth="110.0" text="Business Price"
+                             style="-fx-alignment: CENTER-RIGHT;"/>
+            </columns>
+        </TableView>
+
+        <!-- Back Button -->
+        <Button fx:id="backButton" layoutX="33.0" layoutY="520.0" mnemonicParsing="false"
+                onAction="#backButton" prefHeight="35.0" prefWidth="100.0"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;"
+                text="Back">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+    </VBox>
+
+</AnchorPane>

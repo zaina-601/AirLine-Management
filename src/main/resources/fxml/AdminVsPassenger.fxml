@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="550.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.alabtaal.airline.controller.AdminVsPassengerController">
+   <ImageView fitHeight="400.0" fitWidth="550.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../image/selectionPage.png"/>
+   </ImageView>
+   <Button fx:id="AsAdmin" layoutX="315.0" layoutY="167.0" mnemonicParsing="false" onAction="#AsAdmin" prefHeight="25.0"
+           prefWidth="123.0" style="-fx-background-color: #FF5733;" text="As Admin" textFill="WHITE"/>
+   <Button fx:id="AsPassanger" layoutX="315.0" layoutY="230.0" mnemonicParsing="false" onAction="#AsPassanger"
+           prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #FF5733;" text="As Passanger"
+           textFill="WHITE"/>
+</AnchorPane>

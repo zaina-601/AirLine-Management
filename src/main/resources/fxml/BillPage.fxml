@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.alabtaal.airline.PassengerFlightController.PricingDetailController"
+            prefHeight="450" prefWidth="600"
+            style="-fx-background-color: #f0f8ff;">
+
+   <!-- Background Image -->
+   <ImageView fitHeight="450" fitWidth="600" opacity="0.5">
+      <image>
+         <Image url="@../image/bill.png" />
+      </image>
+   </ImageView>
+
+   <!-- Main Content -->
+   <VBox alignment="CENTER" spacing="20"
+         layoutX="150" layoutY="50"
+         style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 10;"
+         prefWidth="300" prefHeight="350">
+
+      <padding>
+         <Insets top="20" right="20" bottom="20" left="20"/>
+      </padding>
+
+      <!-- Title -->
+      <Label text="Flight Pricing Details"
+             style="-fx-font-weight: bold; -fx-text-fill: #2c3e50;">
+         <font>
+            <Font size="20" />
+         </font>
+      </Label>
+
+      <!-- Pricing Grid -->
+      <GridPane hgap="10" vgap="15">
+         <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" prefWidth="100"/>
+            <ColumnConstraints prefWidth="150"/>
+         </columnConstraints>
+
+         <!-- Ticket Cost -->
+         <Label text="Ticket Cost:"
+                style="-fx-font-weight: bold;"
+                GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+         <TextField fx:id="TicketCost" editable="false"
+                    style="-fx-background-color: white; -fx-border-color: #3498db;"
+                    GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+         <!-- Tax -->
+         <Label text="Tax (5%):"
+                style="-fx-font-weight: bold;"
+                GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+         <TextField fx:id="TaxAmount" editable="false"
+                    style="-fx-background-color: white; -fx-border-color: #3498db;"
+                    GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+         <!-- Total -->
+         <Label text="Total Price:"
+                style="-fx-font-weight: bold; -fx-text-fill: #e74c3c;"
+                GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+         <TextField fx:id="TotalPrice" editable="false"
+                    style="-fx-background-color: white; -fx-border-color: #e74c3c; -fx-text-fill: #e74c3c;"
+                    GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+      </GridPane>
+
+      <!-- Payment Button -->
+      <Button text="Proceed to Payment"
+              onAction="#Payment"
+              style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;"
+              prefWidth="200">
+         <padding>
+            <Insets top="8" bottom="8" left="15" right="15"/>
+         </padding>
+      </Button>
+
+      <!-- Footer Note -->
+      <Label text="* All prices in Pakistani Rupees (PKR)"
+             style="-fx-font-style: italic; -fx-text-fill: #7f8c8d;"/>
+   </VBox>
+</AnchorPane>
